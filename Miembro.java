@@ -5,6 +5,7 @@ public class Miembro {
     private int edad;
     private int mesesAntiguedad;
     private Membresia membresia;
+    private Entrenador entrenador;
     public Miembro(String nombre, String apellido, String cedula, int edad, int mesesAntiguedad, Membresia membresia) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -12,7 +13,9 @@ public class Miembro {
         this.edad = edad;
         this.mesesAntiguedad = mesesAntiguedad;
         this.membresia = membresia;
+        this.entrenador = null;
     }
+    
     
     public String getNombre() {
         return nombre;
@@ -53,6 +56,24 @@ public class Miembro {
 
     public void setMembresia(Membresia membresia) {
         this.membresia = membresia;
+    }
+
+
+    public Entrenador getEntrenador() {
+        return entrenador;
+    }
+
+
+    public void setEntrenador(Entrenador entrenador) {
+        this.entrenador = entrenador;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Miembro [nombre=" + nombre + ", apellido=" + apellido + ", cedula=" + cedula + ", edad=" + edad
+                + ", mesesAntiguedad=" + mesesAntiguedad + ", membresia=" + membresia.toString() + ", entrenador=" + entrenador.toString()
+                + "]";
     }
     
 
